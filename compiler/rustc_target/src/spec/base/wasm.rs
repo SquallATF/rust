@@ -81,8 +81,7 @@ pub(crate) fn options() -> TargetOptions {
         // threaded model which will legalize atomics to normal operations.
         singlethread: true,
 
-        // we use the LLD shipped with the Rust toolchain by default
-        linker: Some("rust-lld".into()),
+        linker: Some("wasm-ld".into()),
         linker_flavor: LinkerFlavor::WasmLld(Cc::No),
 
         pre_link_args,
